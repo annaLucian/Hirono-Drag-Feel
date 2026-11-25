@@ -1,7 +1,14 @@
 import './App.css';
+import Header from './Header';
+import Footer from './Footer';
 
 function App() {
-    return <h1 className="text-4xl underline">Home</h1>;
+    return (
+        <>
+            <Header />
+            <Footer />
+        </>
+    );
 }
 
 export default App;

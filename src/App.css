@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Sniglet:wght@400;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+    --font-sniglet: 'Sniglet', system-ui;
+}
+body {
+    font-family: var(--font-sniglet);
+}
