@@ -1,7 +1,7 @@
-import logo from './assets/logo.png';
+import logo from '@/assets/logo.png';
 const Header = () => {
     return (
-        <header className="bg-black">
+        <header className="">
             <img src={logo} alt="" />
             <p className="text-amber-50">Soy un header</p>
             <h1 className="text-amber-50 text-8xl">Hirano: Drag&Feel</h1>
