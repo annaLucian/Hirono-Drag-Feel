@@ -4,12 +4,15 @@
 @theme {
     --font-sniglet: 'Sniglet', system-ui;
 }
+html,
+body,
+#root {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
 body {
     font-family: var(--font-sniglet);
-    background: url('@/assets/bg.jpg');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 }
 
 @keyframes stamp-nudge {
@@ -39,4 +42,41 @@ body {
 
 .animate-stamp-nudge:hover {
     animation: none;
+}
+
+@keyframes screen-enter {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes screen-exit {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+.animate-screen-enter {
+    animation: screen-enter 280ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.animate-screen-exit {
+    animation: screen-exit 220ms ease-in forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-screen-enter,
+    .animate-screen-exit {
+        animation: none;
+    }
 }
