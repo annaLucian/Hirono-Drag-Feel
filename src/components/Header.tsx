@@ -1,10 +1,11 @@
 import logo from '@/assets/logo.png';
 const Header = () => {
     return (
-        <header className="">
-            <img src={logo} alt="" />
-            <p className="text-amber-50">Soy un header</p>
-            <h1 className="text-amber-50 text-8xl">Hirano: Drag&Feel</h1>
+        <header className="absolute top-1/16 left-20">
+            <a href="/" className="">
+                <img src={logo} alt="Logo hirono drag y feel" className="h-40 w-auto" />
+                <span className="hidden">Arrastra cada emoción, ordena el universo Hirono.</span>
+            </a>
         </header>
     );
 };

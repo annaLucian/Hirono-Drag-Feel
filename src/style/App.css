@@ -11,3 +11,32 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+
+@keyframes stamp-nudge {
+    0%,
+    75%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+        box-shadow: 4px 4px 0px #000000;
+    }
+    80% {
+        transform: translate(-2px, -2px) rotate(-1deg);
+        box-shadow: 6px 6px 0px #000000;
+    }
+    85% {
+        transform: translate(0, 0) rotate(1deg);
+        box-shadow: 3px 3px 0px #000000;
+    }
+    90% {
+        transform: translate(-1px, -1px) rotate(-0.5deg);
+        box-shadow: 5px 5px 0px #000000;
+    }
+}
+
+.animate-stamp-nudge {
+    animation: stamp-nudge 1.2s ease-in-out infinite;
+}
+
+.animate-stamp-nudge:hover {
+    animation: none;
+}
