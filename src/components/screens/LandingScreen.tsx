@@ -5,7 +5,7 @@ import { type LandingScreenProps } from '@/types/landingScreenProps';
 const LandingScreen = ({ onStart, isExiting = false }: LandingScreenProps) => {
     return (
         <main
-            className={`flex-1 flex flex-col items-center justify-center pt-14 px-4 ${
+            className={`flex-1 flex flex-col items-center justify-center pt-8 px-4 ${
                 isExiting ? 'animate-screen-exit pointer-events-none' : 'animate-screen-enter'
             }`}
         >

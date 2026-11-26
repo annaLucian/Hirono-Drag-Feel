@@ -1,12 +1,9 @@
 import { useEffect, useRef } from 'react';
 import lottie from 'lottie-web';
 import springAnimation from '@/assets/spring.json';
+import { type AnimatedSpringProps } from '@/types/animatedSpringProps';
 
-interface AnimatedSpringProps {
-    className?: string;
-}
-
-const AnimatedSpring = ({ className = 'w-2xl' }: AnimatedSpringProps) => {
+const AnimatedSpring = ({ className = 'w-md lg:w-xl' }: AnimatedSpringProps) => {
     const containerRef = useRef<HTMLDivElement | null>(null);
 
     useEffect(() => {
